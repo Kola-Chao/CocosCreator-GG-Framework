@@ -60,5 +60,7 @@ export default class GamePrefab extends PanelComponent {
         this.expLabel.string = myExpLabel.toString();
     }
 
-
+    onClickStart() {
+        
+    }
 }
