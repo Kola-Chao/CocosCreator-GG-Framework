@@ -1,3 +1,4 @@
+import GameModule from "../../../gamebundle/scripts/game/GameModule";
 import GameSettingModule from "../../../gamebundle/scripts/gamesetting/GameSettingModule";
 import { PanelConfigs } from "../../../mainbundle/scripts/configs/PanelConfigs";
 import { gg } from "../../../scripts/framework/gg";
@@ -38,7 +39,8 @@ export default class BootPanelPrefab extends PanelComponent {
         // 初始化游戏设置
         this._onLoadProgressChanged(0.1, "加载游戏设置...");
         GameSettingModule.initSettingConfig();
-
+        GameModule.initGameInfo();
+        
         // 提前加载通用弹窗面板
         this._onLoadProgressChanged(0.2, "加载游戏资源...");
         await gg.panelRouter.loadAsync(PanelConfigs.loadingPanel);

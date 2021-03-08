@@ -13,7 +13,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "GameHomePrefab",
+    "_name": "GamePrefab",
     "_objFlags": 0,
     "_parent": null,
     "_children": [
@@ -3157,6 +3157,9 @@
       "__id__": 1
     },
     "_enabled": true,
+    "headInfo": {
+      "__id__": 33
+    },
     "_id": ""
   },
   {
