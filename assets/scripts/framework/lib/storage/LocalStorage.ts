@@ -39,7 +39,4 @@ export class LocalStorage implements LocalStorageInterface {
         cc.sys.localStorage.removeItem(key);
     }
 
-    setItemBoolean(){
-        
-    }
 }
