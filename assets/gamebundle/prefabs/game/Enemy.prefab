@@ -85,7 +85,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "New Label",
+    "_name": "PropertyLabel",
     "_objFlags": 0,
     "_parent": {
       "__id__": 1
@@ -114,7 +114,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 110,
-      "height": 65.19999999999999
+      "height": 45.199999999999996
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -165,8 +165,8 @@
     ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
-    "_string": "阿斯顿离开家啊是拉开是假的",
-    "_N$string": "阿斯顿离开家啊是拉开是假的",
+    "_string": "",
+    "_N$string": "",
     "_fontSize": 20,
     "_lineHeight": 20,
     "_enableWrapText": true,
@@ -223,7 +223,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "New Label",
+    "_name": "NameLabel",
     "_objFlags": 0,
     "_parent": {
       "__id__": 1
@@ -300,8 +300,8 @@
     ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
-    "_string": "小兵",
-    "_N$string": "小兵",
+    "_string": "",
+    "_N$string": "",
     "_fontSize": 35,
     "_lineHeight": 35,
     "_enableWrapText": true,
@@ -331,7 +331,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "New ProgressBar",
+    "_name": "HP",
     "_objFlags": 0,
     "_parent": {
       "__id__": 1
@@ -433,7 +433,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 75,
+      "width": 150,
       "height": 15
     },
     "_anchorPoint": {
@@ -514,7 +514,7 @@
     "_target": null,
     "_alignFlags": 45,
     "_left": 0,
-    "_right": 75,
+    "_right": 0,
     "_top": 0,
     "_bottom": 0,
     "_verticalCenter": 0,
@@ -585,7 +585,7 @@
       "__id__": 11
     },
     "_N$mode": 0,
-    "_N$progress": 0.5,
+    "_N$progress": 1,
     "_N$reverse": false,
     "_id": ""
   },
