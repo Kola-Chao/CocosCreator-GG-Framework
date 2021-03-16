@@ -3469,6 +3469,15 @@
     "headInfo": {
       "__id__": 33
     },
+    "TabPlayer": {
+      "__id__": 6
+    },
+    "TabBag": {
+      "__id__": 14
+    },
+    "TabBattle": {
+      "__id__": 22
+    },
     "_id": ""
   },
   {

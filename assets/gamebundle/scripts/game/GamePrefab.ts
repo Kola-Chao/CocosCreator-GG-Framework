@@ -1,5 +1,9 @@
+import { ToastPanelShowArgs } from "../../../commonbundle/scripts/popwindow/ToastPanelPrefab";
+import { PanelConfigs } from "../../../mainbundle/scripts/configs/PanelConfigs";
 import { gg } from "../../../scripts/framework/gg";
 import { PanelComponent, PanelHideOption, PanelShowOption } from "../../../scripts/framework/lib/router/PanelComponent";
+import { GameConst } from "./GameConst";
+import { GameEvent } from "./GameEvent";
 import GameModel from "./GameModel";
 import GameModule from "./GameModule";
 
@@ -10,6 +14,12 @@ export default class GamePrefab extends PanelComponent {
 
     @property(cc.Node)
     headInfo: cc.Node = null;
+    @property(cc.Node)
+    TabPlayer: cc.Node = null;
+    @property(cc.Node)
+    TabBag: cc.Node = null;
+    @property(cc.Node)
+    TabBattle: cc.Node = null;
 
     lv: cc.Label = null;
     userName: cc.Label = null;
@@ -48,6 +58,14 @@ export default class GamePrefab extends PanelComponent {
         } else {
             gg.logger.warn("获取headInfo出错");
         }
+        gg.eventManager.on(GameEvent.OnClickBagTab, this.onTabBagClicked, this);
+        gg.eventManager.on(GameEvent.OnClickBattleTab, this.onTabBattleClicked, this);
+        gg.eventManager.on(GameEvent.OnClickPlayerTab, this.onTabPlayerClicked, this);
+
+        this.TabBag.on(cc.Node.EventType.TOUCH_END, this.onClickTabBag, this);
+        this.TabBattle.on(cc.Node.EventType.TOUCH_END, this.onClickTabBattle, this);
+        this.TabPlayer.on(cc.Node.EventType.TOUCH_END, this.onClickTabPlayer, this);
+
     }
 
     refreshHeadInfo() {
@@ -61,6 +79,45 @@ export default class GamePrefab extends PanelComponent {
     }
 
     onClickStart() {
-        
+
+    }
+
+    onClickTabPlayer() {
+        gg.eventManager.emit(GameEvent.OnClickPlayerTab);
+    }
+
+    onClickTabBag() {
+        gg.eventManager.emit(GameEvent.OnClickBagTab);
+    }
+
+    onClickTabBattle() {
+        gg.eventManager.emit(GameEvent.OnClickBattleTab);
+    }
+
+    onTabPlayerClicked() {
+        gg.panelRouter.show({
+            panel: PanelConfigs.toastPanel,
+            data: <ToastPanelShowArgs>{
+                text: "onTabPlayerClicked",
+            },
+        })
+    }
+
+    onTabBagClicked() {
+        gg.panelRouter.show({
+            panel: PanelConfigs.toastPanel,
+            data: <ToastPanelShowArgs>{
+                text: "onTabBagClicked",
+            },
+        })
+    }
+
+    onTabBattleClicked() {
+        gg.panelRouter.show({
+            panel: PanelConfigs.toastPanel,
+            data: <ToastPanelShowArgs>{
+                text: "onTabBattleClicked",
+            },
+        })
     }
 }

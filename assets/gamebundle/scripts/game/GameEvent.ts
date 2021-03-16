@@ -2,6 +2,8 @@ export enum GameEvent {
     /**
      * 切换TAB
      */
-    OnTabChanged = "GameEvent.OnTabChanged",
+    OnClickPlayerTab = "GameEvent.OnClickPlayerTab",
+    OnClickBagTab = "GameEvent.OnClickBagTab",
+    OnClickBattleTab = "GameEvent.OnClickBattleTab",
 
 }
